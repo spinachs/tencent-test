@@ -1,6 +1,6 @@
 FROM ccr.ccs.tencentyun.com/wufan/java8-shanghai
 RUN mkdir -p /usr/business
-ADD mine-api.jar /usr/business/mine-api.jar
+ADD build/libs/tencent-test-0.0.1.jar /usr/business/test.jar
 WORKDIR /usr/business
 EXPOSE 8080
-CMD ["java", "-jar", "mine-api.jar", "--spring.profiles.active=dev"]
+CMD ["java", "-jar", "test.jar"]
